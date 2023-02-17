@@ -1,9 +1,9 @@
     @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
      :root {
-        --cor-primaria: #000000;
-        --cor-secundaria: #F6F6F6;
-        --cor-terciaria: #22D4FD;
-        --cor-hover: #9c9898de;
+        --cor-primaria: #222222;
+        --cor-secundaria: #FFF8EA;
+        --cor-terciaria: #815B5B;
+        --cor-hover: #9E7676;
         /*fontes*/
         --fonte-primaria: 'Montserrat', sans-serif;
         --fonte-secundaria: 'Krona One', sans-serif;
@@ -23,7 +23,8 @@
     }
     
     .cabecalho {
-        padding: 2% 0% 0% 15%;
+        padding: 2% 0% 2% 15%;
+        background-color: var(--cor-terciaria);
     }
     
     .cabecalho__menu {
@@ -35,7 +36,7 @@
         font-family: var(--fonte-primaria);
         font-size: 18px;
         font-weight: 600;
-        color: var(--cor-terciaria);
+        color: var(--cor-primaria);
         text-decoration: none;
     }
     
@@ -128,4 +129,63 @@
     .apresentacao__conteudo__texto a {
         text-decoration: none;
         color: var(--cor-terciaria);
+    }
+    
+    .slider {
+        display: block;
+        height: 450px;
+        width: 800px;
+        margin: auto;
+        margin-top: 20px;
+        position: relative;
+    }
+    
+    .slider li {
+        list-style: none;
+        position: absolute;
+    }
+    
+    .slider img {
+        margin: auto;
+        height: 100%;
+        width: 80%;
+        vertical-align: top;
+    }
+    
+    .slider input {
+        display: none;
+    }
+    
+    .slider label {
+        background-color: #000;
+        bottom: 10px;
+        cursor: pointer;
+        display: block;
+        height: 10px;
+        position: absolute;
+        width: 10px;
+        z-index: 10;
+    }
+    
+    .slider li:nth-child(1) label {
+        left: 10px;
+    }
+    
+    .slider li:nth-child(2) label {
+        left: 40px;
+    }
+    
+    .slider li:nth-child(3) label {
+        left: 70px;
+    }
+    
+    .slider img {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .slider li input:checked~img {
+        opacity: 1;
+        visibility: visible;
+        z-index: 10;
     }
